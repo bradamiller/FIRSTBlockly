@@ -36,18 +36,23 @@ const rangefinder = {
     {
       type: "input_dummy",
       name: "RangeFinder"
-    },
+    }
   ],
   output: "Number",
   colour: 225
 };
 
 const command = {
-  type: "command",
+  type: "command_brad",
   tooltip: "Command the robot should be able to do",
   helpUrl: "",
-  message0: "Command %1 finished when %2 Do this first %3 then repeat this %4 When finished %5",
+  message0: "Command %1 finished when %2 %3 Do this first %4 then repeat this %5 When finished %6",
   args0: [
+    {
+      type: "field_input",
+      name: "NAME",
+      text: "default"
+    },
     {
       type: "input_dummy",
       name: "Command"
