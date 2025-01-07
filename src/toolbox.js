@@ -625,7 +625,7 @@ export const toolbox = {
       contents: [
         {
           kind: 'block',
-          type: 'command_brad',
+          type: 'command',
         },
       ],
     },

@@ -28,25 +28,25 @@ const addText = {
 };
 
 const rangefinder = {
-  type: "rangefinder",
-  tooltip: "",
-  helpUrl: "",
-  message0: "Range in cm %1",
-  args0: [
-    {
-      type: "input_dummy",
-      name: "RangeFinder"
-    }
-  ],
-  output: "Number",
-  colour: 225
-};
+    type: "rangefinder",
+    tooltip: "",
+    helpUrl: "",
+    message0: "Range in cm %1",
+    args0: [
+      {
+        type: "input_dummy",
+        name: "Rangefinder"
+      }
+    ],
+    output: "Number",
+    colour: 225
+  };
 
 const command = {
-  type: "command_brad",
+  type: "command",
   tooltip: "Command the robot should be able to do",
   helpUrl: "",
-  message0: "Command %1 finished when %2 %3 Do this first %4 then repeat this %5 When finished %6",
+  message0: "Command %1 %2 Do this once %3 Then repeat this %4 Until %5 When finished %6",
   args0: [
     {
       type: "field_input",
@@ -58,11 +58,6 @@ const command = {
       name: "Command"
     },
     {
-      type: "input_value",
-      name: "IsFinished",
-      check: "Boolean",
-    },
-    {
       type: "input_statement",
       name: "initialize"
     },
@@ -71,8 +66,13 @@ const command = {
       name: "execute"
     },
     {
-      type: "input_statement",
-      name: "whenFinished"
+      type: "input_value",
+      name: "IsFinished",
+      check: "Boolean"
+    },
+    {
+      "type": "input_statement",
+      "name": "whenFinished"
     }
   ],
   previousStatement: null,
